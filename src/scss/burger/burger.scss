@@ -1,0 +1,185 @@
+$fs: 14px;
+$lh:18px;
+$ls: -0.2px;
+$clr: #1B1C21;
+
+@mixin fonts($fs, $lh, $ls, $clr) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $clr;
+}
+
+
+.burger {
+  min-height: 100%;
+  height: auto;
+  display: none;
+  background-color: #ffffff;
+  z-index: 200;
+  &__header {
+    width: 320px;
+    height: auto;
+    background-color: #ffffff;
+
+ 
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+&_absolute{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+  &__header_margin {}
+
+  &__repairsMenu {
+    width: 155px;
+  display: flex;
+  justify-content: space-between;
+  }
+
+  &__menuSearch{
+
+  }
+&__menuSearch_margin{
+  margin-right: 24px;
+}
+  &__repairsMenu_margin{
+    margin-left: 24px;
+  }
+
+  &__btn_decorBtn {
+    height: 40px;
+    width: 40px;
+    background: #FF3E79;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+  }
+
+
+&__menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &_margin{
+    margin-top: 20px;
+    margin-left: 24px;
+  }
+}
+
+  &__button {
+    position: relative;
+    @include fonts(16px, 24px, -0.2px, #1B1C21);
+    line-height: 24px;
+    /*конец шрифта*/
+    
+    background-color: transparent;
+    &_margin{
+      padding-bottom: 32px;
+    }
+    &:focus{
+      color: #7e7e82;
+      transition: 3s;
+    }
+    &:focus::after {
+      content: "";
+      position: absolute;
+      height: 32px;
+      width: 4px;
+      background: #41F6D7;
+      border-radius: 0 25px 25px 0;
+      left: -24px;
+      top: -5%;
+      
+    }
+  }
+
+
+  &__footer {
+    
+    margin-top: 270px;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__socialMenu {
+    width: 155px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+   
+  display: flex;
+  flex-direction: column;
+  &_margin{
+    margin-top: 16px;
+  }
+  }
+
+  &__email {
+    @include fonts(16px, 24px, -0.2px, #1B1C21);
+    &_margin{}
+  }
+
+  &__tel {
+    font-weight: bold;
+    &_margin{
+      margin-top: 12px;
+    }
+  }
+
+  &__change-language {
+    &_margin{
+      margin-top: 40px;
+    margin-bottom: 32px;
+    }
+  }
+
+  &__buttonChangeLanguage {
+    @include fonts(16px, 24px, -0.2px, #1B1C21);
+    background-color: transparent;
+    &:focus{
+      color: #7e7e82;
+      transition: 3s;
+    }
+  }
+}
+
+.burger_none {
+ 
+}
+
+.formFeedback_fonts{
+  @include fonts(16px, 24px, -0.2px,rgb(181, 182, 188));
+}
+
+
+
+@media (min-width:1440px){
+main{
+  grid-area: main;
+}
+footer{
+  grid-area: footer;
+}
+.burger{
+  display: block;
+  grid-area: burger;
+}
+body{
+  display: grid;
+  grid-template-areas: "burger main" "burger footer";
+}
+.burger__btnNone{
+  display: none;
+}
+}

@@ -1,0 +1,173 @@
+$fs: 14px;
+$lh:18px;
+$ls: -0.2px;
+$clr: #1B1C21;
+
+@mixin fonts($fs, $lh, $ls, $clr) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $clr;
+}
+
+
+.sliders-equip {
+  &_margin{
+    margin-top: 32px;
+    @media(min-width: 1440px){
+      margin-top: 50px;
+    }
+  }
+	&__header-sliders {
+      
+     }
+	&__heading {
+        @include fonts(16px, 24px, -0.2px, #7E7E82);
+        padding: 16px;
+    
+        @media (min-width: 768px) {
+          padding: 16px 0 16px 24px;
+        }
+    
+        @media (min-width: 1440px) {
+            padding: 16px 0 16px 32px;
+        }
+     }
+	&__swiper-container {
+    overflow: hidden;
+   }
+	&__wrapper {
+        margin-top: 16px;
+      width: 100%;
+      display: flex;
+      width: 100%;
+      height: 100%;  
+      @media (min-width: 768px) {
+        margin-top: 24px;
+        flex-wrap: wrap;
+      }
+     }
+	&__wrapper_closed {
+        @media (min-width: 768px) {
+            max-height: 160px;
+            overflow: hidden;
+          }
+     }
+     &__wrapper_padding{
+margin-left: 16px;
+@media(min-width:768px){
+    margin-left: 24px;
+}
+@media(min-width:1440px){
+    margin-left: 32px;
+}
+     }
+	&__card { 
+        width: 240px;
+        height: 72px;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        flex-shrink: 0;
+    
+        @media (min-width: 768px) {
+          margin-bottom: 16px;
+          margin-right: 24px;
+          width: 218px;
+          height: auto;
+        }
+    
+        @media (min-width: 1440px) {
+          margin-right: 32px;
+          width: 240px;
+        }
+    }
+	&__btn {
+    @include fonts(16px, 24px, -0.2px, $clr);
+        width: 240px;
+        height: 160px;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        border: 1px solid rgba(234, 234, 234, 1);
+        border-radius: 6px;
+    >img {
+        margin-right: 16px;
+    }
+        @media (min-width: 768px) {
+          width: 218px;
+        }
+    
+        @media (min-width: 1440px) {
+          width: 240px;
+        }
+     }
+	&__card { 
+        width: 240px;
+        height: 72px;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        flex-shrink: 0;
+    
+        @media (min-width: 768px) {
+          margin-bottom: 16px;
+          margin-right: 24px;
+          width: 218px;
+          height: auto;
+        }
+    
+        @media (min-width: 1440px) {
+          margin-right: 32px;
+          width: 236px;
+        }
+    }
+	&__btnOpen { 
+        display: none;
+  
+        @media (min-width: 768px) {
+          width: 134px;
+          height: 24px;
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+        }
+    }
+	&__btnOpen_text { 
+        @media(min-width:768px) {
+          @include fonts(16px, 24px, -0.2px, $clr);
+            color: rgba(27, 28, 33, 1);
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.3;
+            margin-left: 8px;
+          }
+    }
+}
+.sliders-equip__name-equip{
+    align-self: flex-start;
+    padding: 16px;
+}
+.sliders-equip__swiper-pagination {
+    position: static;
+  text-align: center;
+    @media(min-width: 768px) {
+      display: none;
+    }
+  }
+  .sliders-equip__swiper-pagination-margin{
+    margin-top: 100px;
+    margin-bottom: 34px;
+  }
+  .sliders-equip__swiper-pagination-bullet {
+    margin: 16px 12px 0 0;
+    width: 12px;
+    height: 12px;
+    background-color: $pagination-bullet;
+  }
+  
+  .sliders-equip__swiper-pagination-bullet-active {
+    background-color: $pagination-bullet-act;
+  }
+

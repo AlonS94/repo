@@ -1,0 +1,203 @@
+$fs: 14px;
+$lh:18px;
+$ls: -0.2px;
+$clr: #1B1C21;
+
+
+@mixin fonts($fs, $lh, $ls, $clr) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $clr;
+}
+.price {
+	&__header {
+  
+     }
+     &__header_margin{
+         margin-top: 24px;
+         @media (min-width:768px){
+             margin-top: 32px;
+         }
+         @media(min-width:1440px){
+             margin-top: 50px;
+         }
+     }
+	&__heading {
+        @include fonts(16px, 24px, -0.2px, #7E7E82);
+        padding: 16px;
+        @media (min-width:768px){
+            padding: 16px 0 16px 24px;
+        }
+        @media (min-width:1440px){
+            padding: 16px 0 16px 32px;
+        }
+     }
+	&__tittle {
+        padding-left: 16px;
+        max-width: 465px;
+        @media(min-width:1440px){
+            max-width: 781px;
+        }
+     }
+	&__tittle_none {
+        display: none;
+        @media(min-width:768px){
+            display: flex;
+            justify-content: space-between;
+        }
+     }
+     &__tittle_margin{
+         @media (min-width:768px){
+             margin-top: 31px;
+             margin-bottom: 16px;
+         }
+     }
+     &__info {
+        &_margin{
+            margin-left: auto;
+            margin-right: 38px;
+            @media(min-width:1440px){
+                margin-right: 180px;
+            }
+        }
+        &_margin-time{
+            margin-right: 30px;
+        }
+     }
+    &__info_none {
+        @media(min-width: 768px){
+            display: none;
+        }
+     }
+	&__swiper-container {
+        overflow: hidden;
+     }
+	&__wrapper {
+        margin-top: 53px;
+        padding: 0 16px;
+        width: 100%;
+        display: flex;
+        height: 100%;
+        @media (min-width:768px) {
+       flex-direction: column;     
+        }
+     }
+	&__wrapper_closed { }
+	&__card {
+        background-color: #FFFFFF;
+        width: 260px;
+        height: 200px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        >div:last-child{
+            display: flex;
+            justify-content: space-between;
+        }
+        @media(min-width:768px){
+            &:not(:last-child):before{
+                content: "";
+                height: 1px;
+                width: calc(100% - 32px);
+                left: 16px;
+                bottom: 0;
+                background-color: #EAEAEA;
+                position: absolute;    
+            }
+           &_titleAbsolute{
+               display: block;
+               position: absolute;
+               top: -30px;
+           }
+        }
+      @media (min-width:768px) {
+          position: relative;
+          flex-direction: row;
+          width: auto;
+          height: auto;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px ;
+      }
+     }
+     &__nameService{
+         flex-basis: 348px;
+     }
+     &__price{
+         flex-basis: 74px;
+     }
+     &__time{
+         flex-basis: 333px;
+         align-items: center;
+     }
+	&__info_none { }
+	&__infoValue { }
+    &__btnOrder{
+        @include fonts(12px, 24px, -0.15px, #FFFFFF);
+        background-color: #FF3E79;
+        border-radius: 16px;
+        width: 119px;
+        height: 32px;
+        display: flex;
+        justify-content: space-around;
+align-items: center;
+
+    }
+	&__swiper-pagination {
+        text-align: center;
+     }
+	&__swiper-pagination-margin {
+        margin-top: 10px;
+     }
+	&__feedback {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 192px;
+        width: 288px;
+        @media (min-width:768px){
+            height: 100px;
+            width: 421px;
+        }
+        >a{
+
+            display: flex;
+            align-items: center;
+            
+            @include fonts(16px, 24px, -0.2px, $clr);
+            @media (min-width: 768px){
+
+                margin-top: 16px;
+                min-width: 316px;
+            }
+            >img{
+                margin-left: 5px;
+            }
+        }
+     }
+	&__nds {
+        @include fonts(14px, 20px, 0.2px, $clr);
+        @media(min-width: 768px){
+         max-width: 421px;
+        }
+     }
+}
+
+.price__feedback_margin{
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.price__card_margin{
+    margin: 16px;
+    @media (min-width: 768px){
+        margin: 0;
+    }
+}
+
+.price__infoValue_margin{
+    margin-top: 4px;
+}
