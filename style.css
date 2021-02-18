@@ -462,6 +462,14 @@ main {
 .swiper-pagination-bullet-active {
   background-color: #b5b6bc; }
 
+.swiper-container__btnOpen_rotate {
+  transform: rotate(180deg);
+  transition: 1s; }
+
+.swiper-container__btnOpen_rotateStandart {
+  transform: rotate(0deg);
+  transition: 1s; }
+
 .sliders-equip_margin {
   margin-top: 32px; }
   @media (min-width: 1440px) {
