@@ -167,3 +167,11 @@ $pagination-bullet-act:rgba(181, 182, 188, 1);
 .swiper-pagination-bullet-active {
   background-color: $pagination-bullet-act;
 }
+.swiper-container__btnOpen_rotate{
+  transform: rotate(180deg);
+  transition:  1s ;
+}
+.swiper-container__btnOpen_rotateStandart{
+  transform: rotate(0deg);
+  transition:  1s ;
+}
